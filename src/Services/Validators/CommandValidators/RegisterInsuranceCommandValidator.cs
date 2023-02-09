@@ -1,7 +1,6 @@
 ﻿namespace Services.Validators.CommandValidators
 {
     using System;
-    using System.Text.RegularExpressions;
     using Domain.Dtos;
     using Domain.Entities;
     using FluentValidation;

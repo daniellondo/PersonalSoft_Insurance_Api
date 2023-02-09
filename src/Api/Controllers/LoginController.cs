@@ -1,12 +1,12 @@
 ﻿namespace Api.Controllers
 {
+    using System.IdentityModel.Tokens.Jwt;
+    using System.Security.Claims;
+    using System.Text;
     using Domain.Dtos;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.IdentityModel.Tokens;
-    using System.IdentityModel.Tokens.Jwt;
-    using System.Security.Claims;
-    using System.Text;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -18,12 +18,13 @@
             _config = config;
         }
 
-        [AllowAnonymous]
-        [HttpPost]
+
         /// <summary>
-        /// Username: admin - Password: admin
+        ///     Username: admin - Password: admin
         /// </summary>
         /// <param name="userLogin"></param>
+        [AllowAnonymous]
+        [HttpPost]
         public ActionResult Login([FromBody] UserLogin userLogin)
         {
             var user = Authenticate(userLogin);

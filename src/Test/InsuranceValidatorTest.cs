@@ -8,7 +8,6 @@
     using Services.Validators.CommandValidators;
     using Services.Validators.QueryValidators;
     using Services.Validators.Shared;
-    using Test;
     using Xunit;
 
     public class InsuranceValidatorTest

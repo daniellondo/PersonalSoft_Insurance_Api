@@ -1,7 +1,6 @@
 ﻿namespace Domain.Dtos
 {
     using System;
-    using Domain.Entities;
 
     public class InsuranceResponseDto
     {
